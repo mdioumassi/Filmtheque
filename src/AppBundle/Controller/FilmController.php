@@ -47,13 +47,6 @@ class FilmController extends Controller
     }
 
     /**
-     * @Route("/film/recherche", name="film_search")
-     */
-    public function rechercheAction(){
-        return $this->render('@App/film/recherche.html.twig');
-    }
-
-    /**
      * @Route("/film/detail/{id}", name="detail_film")
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response

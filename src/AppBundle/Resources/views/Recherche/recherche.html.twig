@@ -1,0 +1,24 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block content %}
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+      <div class="col-sm-3">
+        {{ form_row(form.titre) }}
+      </div>
+    <div class="col-sm-3">
+        {{ form_row(form.categorie) }}
+      </div>
+    <div class="col-sm-3">
+        {{ form_row(form.ok) }}
+    </div>
+    {{ form_end(form) }}
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $('document').ready(function () {
+            $("p.recherche span").addClass("label-primary");
+        });
+    </script>
+{% endblock %}
