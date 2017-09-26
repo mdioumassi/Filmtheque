@@ -1,0 +1,45 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block content %}
+<form method="post" action="">
+    <div class="col-sm-3">
+        <div class="form-group">
+            <input type="text" class="form-control" id="titre" placeholder="Titre">
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Catégorie
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Aventure</a></li>
+                <li><a href="#">Policier</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Date Ajout
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">12/09/2017</a></li>
+                <li><a href="#">12/09/2017</a></li>
+                <li><a href="#">12/09/2017</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <button type="submit" class="btn btn-primary">OK</button>
+    </div>
+
+</form>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $('document').ready(function () {
+            $("p.recherche span").addClass("label-primary");
+        });
+    </script>
+{% endblock %}

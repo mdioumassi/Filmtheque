@@ -1,0 +1,26 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block content %}
+  <ul>
+      {% for film in films %}
+      <li class="col-sm-3" style="list-style: none">
+        <div class="row">
+            <div>
+                <h4>{{ film.titre }}</h4>
+                <img class="imagesize" src="{{film.image.path}}" alt="{{film.image.alt}}"><br>
+                <a href="{{ path('detail_film',{'id':film.id}) }}" class="btn btn-default" role="button">Description</a>
+            </div>
+        </div>
+      </li>
+     {% endfor %}
+  </ul>
+    <div class="col-sm-12 text-center">
+        <ul class="pagination">
+            <li><a href="#">Action</a></li>
+            <li class="active"><a href="#">Aventure</a></li>
+            <li><a href="#">Comique</a></li>
+            <li><a href="#">Policier</a></li>
+            <li><a href="#">Sciences fiction</a></li>
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,5 @@
+<div class="col-sm-2 sidenav text-left">
+    <p class="recherche"><a href="{{ path('film_search') }}"><span class="label">Recherche</span></a></p>
+    <p class="ajout"><a href="{{ path('film_add') }}"><span class="label">Ajouter un film</span></a></p>
+    {{ render(controller('AppBundle:Categorie:liste')) }}
+</div>
